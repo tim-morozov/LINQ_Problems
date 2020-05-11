@@ -10,7 +10,7 @@ namespace LINQ_Problems
     class LINQ
     {
        public List<string> wordlist = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
-        List<string> names = new List<string>() { "Mike", "Dan", "Scott", "Nick", "Mike" };
+       public List<string> names = new List<string>() { "Mike", "Dan", "Scott", "Nick", "Mike" };
        
 
 
@@ -22,6 +22,18 @@ namespace LINQ_Problems
             {
                 Console.WriteLine(wor); 
             }  
+        }
+
+        public List<string> RemoveDuplicate(List<string> name)
+        {
+            List<string> newNames = new List<string>();
+            var names = name;
+            var removedNames = names.Distinct();
+            foreach(var nam in removedNames)
+            {
+                newNames.Add(nam);
+            }
+            return newNames;
         }
     }
 }

@@ -13,6 +13,7 @@ namespace LINQ_Problems
             LINQ linq = new LINQ();
 
             linq.WordsWithTh(linq.wordlist);
+            linq.RemoveDuplicate(linq.names);
         }
     }
 }
