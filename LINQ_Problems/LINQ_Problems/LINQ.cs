@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace LINQ_Problems
 {
-    class Program
+    class LINQ
     {
-        static void Main(string[] args)
-        {
-            
-        }
+        var words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
     }
 }
