@@ -93,5 +93,24 @@ namespace LINQ_Problems
             var classAverage = (sOne + sTwo + sThree + sFour) / 4;
             return classAverage;
         }
+
+        public void CondenseName()
+        {
+            Console.Clear();
+           Console.WriteLine("Enter word");
+            string name = Console.ReadLine().ToUpper();
+            var condensedName = name.OrderBy(n => n).GroupBy(n => n).Select(n => n);
+            string newName = null;
+
+            foreach(var character in condensedName)
+            {
+
+               newName += character.Key.ToString();
+               newName += character.Count().ToString();
+            }
+
+            Console.WriteLine(newName);
+            Console.ReadLine();
+        }
     }
 }
